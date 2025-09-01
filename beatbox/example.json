@@ -1,0 +1,45 @@
+meta: {
+    bpm: 120,
+    bars: 1
+},
+tracks: [
+  {
+    "id": "d_kick",
+    "type": "drum",
+    "drum": "kick",
+    "steps": [1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0],
+    "adsr": {
+      "attack": 0.001,
+      "decay": 0.08,
+      "sustain": 0,
+      "release": 0.03
+    }
+  },
+  {
+    "id": "d_snare",
+    "type": "drum",
+    "drum": "clap",
+    "steps": [0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0],
+    "adsr": {
+      "attack": 0.001,
+      "decay": 0.06,
+      "sustain": 0,
+      "release": 0.03
+    }
+  },
+  {
+    "id": "d_hihat",
+    "type": "drum",
+    "drum": "hihat",
+    "steps": [1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0],
+    "adsr": {
+      "attack": 0.001,
+      "decay": 0.05,
+      "sustain": 0,
+      "release": 0.02
+    }
+  }
+],
+isPlaying: false,
+currentStep: 0,
+timerId: null

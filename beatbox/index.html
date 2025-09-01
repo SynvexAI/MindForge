@@ -3,20 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beatbox</title>
+    <title>Beatbot</title>
+    <link rel="icon" type="image/png" href="../favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="drum-machine">
-        <h1>Beatbox</h1>
-        <div class="controls">
-            <button id="play-stop-btn">Play</button>
-            <div class="bpm-control">
-                <label for="bpm">BPM:</label>
-                <input type="number" id="bpm" value="120" min="60" max="200">
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Beatbot</h1>
+            <div class="master-controls">
+                <div class="control-group">
+                    <label for="bpm">BPM</label>
+                    <input type="number" id="bpm" value="120" min="40" max="240">
+                </div>
+                <button id="play-stop-btn" class="play-button">
+                    <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                    <svg class="icon-stop" viewBox="0 0 24 24"><path d="M6 6h12v12H6z"></path></svg>
+                </button>
             </div>
-        </div>
-        <div id="sequencer-container" class="sequencer-grid"></div>
+        </header>
+
+        <main id="sequencer-container" class="sequencer"></main>
+
+        <footer>
+            <button id="add-track-btn" class="add-track-button">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
+                <span>Добавить дорожку</span>
+            </button>
+        </footer>
     </div>
 
     <script src="script.js"></script>
