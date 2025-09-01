@@ -12,29 +12,43 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-container">
-        <header class="app-header">
-            <h1>Beatbot</h1>
-            <div class="master-controls">
-                <div class="control-group">
-                    <label for="bpm">BPM</label>
-                    <input type="number" id="bpm" value="120" min="40" max="240">
+    <div class="beatbox-instance-host">
+        <div class="beatbox-app-container">
+            <div class="json-input-panel">
+                <div class="json-input-header">
+                    <h3>JSON Configuration</h3>
+                    <div class="json-controls">
+                        <button id="load-json-btn" class="json-btn">Load</button>
+                        <button id="export-json-btn" class="json-btn">Export</button>
+                        <button id="reset-json-btn" class="json-btn">Reset</button>
+                    </div>
                 </div>
-                <button id="play-stop-btn" class="play-button">
-                    <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
-                    <svg class="icon-stop" viewBox="0 0 24 24"><path d="M6 6h12v12H6z"></path></svg>
-                </button>
+                <textarea id="json-input" placeholder="Введите JSON конфигурацию..."></textarea>
             </div>
-        </header>
 
-        <main id="sequencer-container" class="sequencer"></main>
+            <header class="beatbox-app-header">
+                <h1>Noizo</h1>
+                <div class="master-controls">
+                    <div class="control-group">
+                        <label for="bpm">BPM</label>
+                        <input type="number" id="bpm" value="120" min="40" max="240">
+                    </div>
+                    <button id="play-stop-btn" class="play-button">
+                        <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                        <svg class="icon-stop" viewBox="0 0 24 24"><path d="M6 6h12v12H6z"></path></svg>
+                    </button>
+                </div>
+            </header>
 
-        <footer>
-            <button id="add-track-btn" class="add-track-button">
-                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
-                <span>Добавить дорожку</span>
-            </button>
-        </footer>
+            <main id="sequencer-container" class="sequencer"></main>
+
+            <footer class="beatbox-footer">
+                <button id="add-track-btn" class="add-track-button">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg>
+                    <span>Добавить дорожку</span>
+                </button>
+            </footer>
+        </div>
     </div>
 
     <script src="script.js"></script>
