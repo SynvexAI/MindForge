@@ -9,7 +9,7 @@
 ## 🔗 Ссылки
 
 - [ReMind](index.html) - основное приложение
-- [Beatbox](beatbox/index.html) - музыкальный редактор
+- [Beatbox](https://synvexai.github.io/MindForge/beatbox) - музыкальный редактор
 
 ---
 
