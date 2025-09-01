@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beatbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="drum-machine">
+        <h1>Beatbox</h1>
+        <div class="controls">
+            <button id="play-stop-btn">Play</button>
+            <div class="bpm-control">
+                <label for="bpm">BPM:</label>
+                <input type="number" id="bpm" value="120" min="60" max="200">
+            </div>
+        </div>
+        <div id="sequencer-container" class="sequencer-grid"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
