@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="quiz-container">
+        <div class="quiz-card" id="quiz-card">
+            <div class="quiz-header">
+                <span id="progress-text">Вопрос 1/4</span>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="progress-bar"></div>
+                </div>
+            </div>
+
+            <div class="quiz-body">
+                <h2 id="question-text">Загрузка вопроса...</h2>
+                <ul class="choices-grid" id="choices-grid"></ul>
+            </div>
+
+            <div class="quiz-footer">
+                <div class="hint-section">
+                    <button class="hint-button" id="hint-button">💡 Подсказка</button>
+                    <p class="hint-text" id="hint-text"></p>
+                </div>
+                <div class="feedback-section" id="feedback-section"></div>
+                <button class="next-button" id="next-button" style="display: none;">Далее</button>
+            </div>
+        </div>
+
+        <div class="quiz-card results-card" id="results-card" style="display: none;">
+            <h2>Квиз завершён!</h2>
+            <p id="results-text">Ваш результат: 3 из 4</p>
+            <p id="results-title" class="next-quiz-title">Следующий квиз: Алгоритмы</p>
+            <button class="next-button" id="restart-button">Попробовать снова</button>
+        </div>
+    </main>
+
+    <svg width="0" height="0" style="position:absolute;">
+      <symbol id="icon-check" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+      </symbol>
+      <symbol id="icon-close" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/>
+      </symbol>
+    </svg>
+
+    <script src="script.js"></script>
+</body>
+</html>
